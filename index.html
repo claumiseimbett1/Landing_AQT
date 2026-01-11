@@ -1162,7 +1162,7 @@
                 </div>
                 <div class="contacto-form">
                     <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Envíanos un Mensaje</h3>
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/maqqwgdn" method="POST">
                         <div class="form-group">
                             <label for="nombre">Nombre Completo *</label>
                             <input type="text" id="nombre" name="nombre" required>
@@ -1314,25 +1314,47 @@
             });
         });
 
-        // Formulario de contacto
+        // Formulario de contacto con Formspree
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 const submitBtn = this.querySelector('.submit-button');
                 const originalText = submitBtn.textContent;
                 submitBtn.textContent = 'Enviando...';
                 submitBtn.disabled = true;
-
-                // Aquí puedes agregar la lógica de envío del formulario
-                // Por ahora, simulamos el envío
-                setTimeout(() => {
-                    alert('¡Gracias! Tu mensaje ha sido enviado. Te contactaremos pronto.');
-                    this.reset();
+                
+                try {
+                    const formData = new FormData(this);
+                    const response = await fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Éxito
+                        alert('¡Gracias! Tu mensaje ha sido enviado. Te contactaremos pronto.');
+                        this.reset();
+                    } else {
+                        // Error
+                        const data = await response.json();
+                        if (data.errors) {
+                            alert('Hubo un error al enviar el formulario. Por favor, intenta nuevamente.');
+                        } else {
+                            alert('Hubo un error al enviar el formulario. Por favor, intenta nuevamente.');
+                        }
+                    }
+                } catch (error) {
+                    alert('Hubo un error de conexión. Por favor, intenta nuevamente.');
+                    console.error('Error:', error);
+                } finally {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
-                }, 1000);
+                }
             });
         }
 
