@@ -1,4 +1,4 @@
-# Guía de Optimización SEO - Montería Club Deportivo Aquaten
+# Guía de Optimización SEO - Montería Club Deportivo AquaTEN
 
 ## ✅ Archivos Creados para SEO
 

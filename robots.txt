@@ -1,4 +1,4 @@
-# robots.txt para Montería Club Deportivo Aquaten
+# robots.txt para Montería Club Deportivo AquaTEN
 # https://aquaten.com/robots.txt
 
 User-agent: *

@@ -1,10 +1,10 @@
-# Montería Club Deportivo Aquaten - Landing Page
+# Montería Club Deportivo AquaTEN - Landing Page
 
-Landing page oficial del **Club Deportivo Aquaten** en Montería, Córdoba, Colombia. Sitio web diseñado para promover los servicios de aquafitness y natación para niños y adultos, eventos deportivos y facilitar el contacto con el club.
+Landing page oficial del **Club Deportivo AquaTEN** en Montería, Córdoba, Colombia. Sitio web diseñado para promover los servicios de aquafitness y natación para niños y adultos, eventos deportivos y facilitar el contacto con el club.
 
 ## 📋 Descripción
 
-Página web moderna y responsive que presenta los servicios y actividades del Club Deportivo Aquaten, incluyendo:
+Página web moderna y responsive que presenta los servicios y actividades del Club Deportivo AquaTEN, incluyendo:
 
 - **Aquafitness**: Clases de ejercicios acuáticos para todas las edades
 - **Natación para Niños**: Programas de natación infantil
@@ -166,7 +166,7 @@ Estos colores están definidos como variables CSS en el archivo `index.html`.
 
 - **WhatsApp**: +57 304 349 9052
 - **Instagram**: [@aquaten.cd](https://www.instagram.com/aquaten.cd/)
-- **Facebook**: [Aquaten](https://www.facebook.com/profile.php?id=61564187752886)
+- **Facebook**: [AquaTEN](https://www.facebook.com/profile.php?id=61564187752886)
 - **Ubicación**: Piscina Corales y Villaolimpica, Montería, Córdoba, Colombia
 
 ## 🔍 SEO
@@ -217,7 +217,7 @@ Los colores están definidos como variables CSS en la sección `<style>`. Busca 
 
 ## 📄 Licencia
 
-Este proyecto es propiedad del Club Deportivo Aquaten, Montería, Córdoba, Colombia.
+Este proyecto es propiedad del Club Deportivo AquaTEN, Montería, Córdoba, Colombia.
 
 ## 👨‍💻 Desarrollo
 
@@ -225,6 +225,6 @@ Sitio desarrollado con HTML5, CSS3 y JavaScript vanilla, sin frameworks ni depen
 
 ---
 
-**Club Deportivo Aquaten**  
+**Club Deportivo AquaTEN**  
 Montería, Córdoba, Colombia  
 2026
