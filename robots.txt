@@ -1,0 +1,30 @@
+# robots.txt para Montería Club Deportivo Aquaten
+# https://aquaten.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Permitir acceso a recursos estáticos importantes para SEO
+Allow: /logo/
+Allow: /images/
+Allow: /videos/
+Allow: /css/
+Allow: /js/
+
+# Sitemap location
+Sitemap: https://aquaten.com/sitemap.xml
+
+# Crawl-delay (opcional, ajustar según necesidad)
+Crawl-delay: 1
+
+# Específico para Googlebot
+User-agent: Googlebot
+Allow: /
+Sitemap: https://aquaten.com/sitemap.xml
+
+# Específico para Bingbot
+User-agent: Bingbot
+Allow: /
+Sitemap: https://aquaten.com/sitemap.xml
