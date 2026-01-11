@@ -6,7 +6,7 @@
     
     <!-- Página principal -->
     <url>
-        <loc>https://aquaten.com/</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,42 +14,42 @@
     
     <!-- Secciones principales (basadas en los IDs de las secciones) -->
     <url>
-        <loc>https://aquaten.com/#inicio</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/#inicio</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://aquaten.com/#aquafitness</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/#aquafitness</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://aquaten.com/#natacion</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/#natacion</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://aquaten.com/#eventos</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/#eventos</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://aquaten.com/#ubicacion</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/#ubicacion</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://aquaten.com/#contacto</loc>
+        <loc>https://monteriaaquatenclub.netlify.app/#contacto</loc>
         <lastmod>2025-01-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

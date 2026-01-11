@@ -1,5 +1,5 @@
 # robots.txt para Montería Club Deportivo AquaTEN
-# https://aquaten.com/robots.txt
+# https://monteriaaquatenclub.netlify.app/robots.txt
 
 User-agent: *
 Allow: /
@@ -14,7 +14,7 @@ Allow: /css/
 Allow: /js/
 
 # Sitemap location
-Sitemap: https://aquaten.com/sitemap.xml
+Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
 
 # Crawl-delay (opcional, ajustar según necesidad)
 Crawl-delay: 1
@@ -22,9 +22,9 @@ Crawl-delay: 1
 # Específico para Googlebot
 User-agent: Googlebot
 Allow: /
-Sitemap: https://aquaten.com/sitemap.xml
+Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
 
 # Específico para Bingbot
 User-agent: Bingbot
 Allow: /
-Sitemap: https://aquaten.com/sitemap.xml
+Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
