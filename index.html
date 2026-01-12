@@ -142,6 +142,69 @@
     }
     </script>
     
+    <!-- Schema.org Event Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "V Championship Master Swimming en Montería",
+      "description": "El V Championship Master Swimming en Montería es uno de los eventos deportivos de natación más importantes en Montería, Córdoba. Este campeonato reúne a los mejores nadadores de diferentes categorías para competir en un ambiente deportivo y de camaradería.",
+      "startDate": "2026-06-01T08:00:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Piscina Villaolimpica",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Piscina Villaolimpica",
+          "addressLocality": "Montería",
+          "addressRegion": "Córdoba",
+          "addressCountry": "CO"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "8.7500",
+          "longitude": "-75.8814"
+        }
+      },
+      "organizer": [
+        {
+          "@type": "Organization",
+          "name": "Montería Club Deportivo AquaTEN",
+          "url": "https://monteriaaquatenclub.netlify.app",
+          "sameAs": [
+            "https://www.instagram.com/aquaten.cd/",
+            "https://www.facebook.com/profile.php?id=61564187752886"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "name": "ELYANASNATACION"
+        }
+      ],
+      "performer": {
+        "@type": "Organization",
+        "name": "Nadadores Master de Montería y Región",
+        "description": "Nadadores competitivos de diferentes categorías master"
+      },
+      "image": "https://monteriaaquatenclub.netlify.app/logo/AQUATEN_LogoTransparenteGRANDE.png",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://monteriaaquatenclub.netlify.app/#eventos",
+        "price": "0",
+        "priceCurrency": "COP",
+        "availability": "https://schema.org/PreOrder",
+        "validFrom": "2026-01-01T00:00:00-05:00"
+      },
+      "sport": "Swimming",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Nadadores Master"
+      }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
