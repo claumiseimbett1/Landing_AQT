@@ -239,6 +239,29 @@
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .header-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .header:hover .header-video-container {
+            opacity: 1;
+        }
+
+        .header-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .header.scrolled {
@@ -247,6 +270,14 @@
             background: rgba(255, 255, 255, 0.98);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+        }
+
+        .header.scrolled .header-video-container {
+            opacity: 0.3;
+        }
+
+        .header.scrolled:hover .header-video-container {
+            opacity: 0.6;
         }
 
         .header.scrolled .nav-logo {
@@ -312,6 +343,11 @@
 
         .nav-menu a:hover {
             color: var(--secondary-color);
+        }
+
+        .nav-container {
+            position: relative;
+            z-index: 1;
         }
 
         /* Hero Section con Video */
@@ -1147,6 +1183,155 @@
                         0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
+        /* Galería de Actividades Section */
+        .galeria-actividades-section {
+            background: white;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .galeria-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 16/9;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 240, 255, 0.4);
+        }
+
+        .galeria-item img,
+        .galeria-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item:hover img,
+        .galeria-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .galeria-item-video {
+            position: relative;
+        }
+
+        .galeria-item-video::after {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .galeria-item-video:hover::after {
+            opacity: 1;
+        }
+
+        .galeria-item video {
+            display: block;
+        }
+
+        .galeria-filtros {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .galeria-filtro-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--background-light);
+            border: 2px solid var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .galeria-filtro-btn:hover,
+        .galeria-filtro-btn.active {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+        }
+
+        /* Modal para videos */
+        .galeria-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .galeria-modal.active {
+            display: flex;
+        }
+
+        .galeria-modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            width: auto;
+            height: auto;
+        }
+
+        .galeria-modal-content video,
+        .galeria-modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+
+        .galeria-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .galeria-modal-close:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hamburger {
@@ -1247,6 +1432,20 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
+
+            .galeria-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .galeria-filtros {
+                gap: 0.5rem;
+            }
+
+            .galeria-filtro-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -1258,6 +1457,11 @@
     
     <!-- Header -->
     <header class="header">
+        <div class="header-video-container">
+            <video autoplay muted loop>
+                <source src="./videos/VideoMarAzul-aquaten-monteria.mp4" type="video/mp4">
+            </video>
+        </div>
         <nav class="nav-container">
             <img src="./logo/AQUATEN_LogoTransparenteGRANDE.png" alt="AquaTEN Logo" class="nav-logo">
             <div class="hamburger" id="hamburger">
@@ -1270,6 +1474,7 @@
                 <li><a href="#quienes-somos">Quiénes Somos</a></li>
                 <li><a href="#aquafitness">Aquafitness</a></li>
                 <li><a href="#natacion">Natación</a></li>
+                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -1480,6 +1685,55 @@
             </div>
         </div>
     </section>
+
+    <!-- Galería de Actividades Section -->
+    <section class="section galeria-actividades-section" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Galería de Actividades</h2>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-dark);">
+                Descubre nuestros momentos más especiales en clases de aquafitness y natación
+            </p>
+            <div class="galeria-filtros">
+                <button class="galeria-filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="galeria-filtro-btn" data-filtro="videos">Videos</button>
+                <button class="galeria-filtro-btn" data-filtro="fotos">Fotos</button>
+            </div>
+            <div class="galeria-grid" id="galeriaGrid">
+                <div class="galeria-item galeria-item-video" data-categoria="videos">
+                    <video muted loop>
+                        <source src="./videos/VideoMarAzul-aquaten-monteria.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="galeria-item galeria-item-video" data-categoria="videos">
+                    <video muted loop>
+                        <source src="./videos/aquaten-natacion-aquafitness-monteria.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="galeria-item galeria-item-video" data-categoria="videos">
+                    <video muted loop>
+                        <source src="./videos/AquafitnessVideoCorales.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="galeria-item" data-categoria="fotos">
+                    <img src="./images/FotoPiscinaVillaOlimpica.jpg" alt="Piscina Villa Olímpica - AquaTEN Montería">
+                </div>
+                <div class="galeria-item" data-categoria="fotos">
+                    <img src="./images/MancuernaDisco.jpg" alt="Aquafitness con Mancuernas - AquaTEN Montería">
+                </div>
+                <div class="galeria-item" data-categoria="fotos">
+                    <img src="./images/NatacionAQT.JPG" alt="Clases de Natación - AquaTEN Montería">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para videos e imágenes -->
+    <div class="galeria-modal" id="galeriaModal">
+        <div class="galeria-modal-content">
+            <span class="galeria-modal-close" id="galeriaModalClose">&times;</span>
+            <div id="galeriaModalMedia"></div>
+        </div>
+    </div>
 
     <!-- Diferencias entre Natación y Aquafitness Section -->
     <section class="section diferencias-section" id="diferencias">
@@ -1959,6 +2213,97 @@
                     item.classList.add('active');
                 }
             });
+        });
+
+        // Galería de Actividades - Filtros
+        const filtroBtns = document.querySelectorAll('.galeria-filtro-btn');
+        const galeriaItems = document.querySelectorAll('.galeria-item');
+
+        filtroBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover active de todos los botones
+                filtroBtns.forEach(b => b.classList.remove('active'));
+                // Agregar active al botón clickeado
+                btn.classList.add('active');
+
+                const filtro = btn.getAttribute('data-filtro');
+
+                galeriaItems.forEach(item => {
+                    const categoria = item.getAttribute('data-categoria');
+                    if (filtro === 'todos' || categoria === filtro) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Galería Modal
+        const galeriaModal = document.getElementById('galeriaModal');
+        const galeriaModalClose = document.getElementById('galeriaModalClose');
+        const galeriaModalMedia = document.getElementById('galeriaModalMedia');
+
+        // Abrir modal al hacer click en un item
+        galeriaItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const video = item.querySelector('video');
+                const img = item.querySelector('img');
+
+                if (video) {
+                    const videoClone = video.cloneNode(true);
+                    videoClone.controls = true;
+                    videoClone.autoplay = true;
+                    videoClone.muted = false;
+                    galeriaModalMedia.innerHTML = '';
+                    galeriaModalMedia.appendChild(videoClone);
+                    galeriaModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else if (img) {
+                    const imgClone = img.cloneNode(true);
+                    galeriaModalMedia.innerHTML = '';
+                    galeriaModalMedia.appendChild(imgClone);
+                    galeriaModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Cerrar modal
+        galeriaModalClose.addEventListener('click', () => {
+            galeriaModal.classList.remove('active');
+            document.body.style.overflow = '';
+            galeriaModalMedia.innerHTML = '';
+        });
+
+        galeriaModal.addEventListener('click', (e) => {
+            if (e.target === galeriaModal) {
+                galeriaModal.classList.remove('active');
+                document.body.style.overflow = '';
+                galeriaModalMedia.innerHTML = '';
+            }
+        });
+
+        // Reproducir videos en hover en la galería
+        galeriaItems.forEach(item => {
+            const video = item.querySelector('video');
+            if (video) {
+                item.addEventListener('mouseenter', () => {
+                    video.play();
+                });
+                item.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            }
         });
     </script>
 </body>
