@@ -472,6 +472,27 @@
             margin-bottom: 3rem;
         }
 
+        /* Quiénes Somos Section */
+        .quienes-somos-section {
+            background: white;
+        }
+
+        .quienes-somos-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .quienes-somos-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        .quienes-somos-text p {
+            margin-bottom: 1rem;
+        }
+
         /* Aquafitness Section */
         .aquafitness-section {
             background: var(--background-light);
@@ -958,7 +979,8 @@
 
             .aquafitness-content,
             .ubicacion-content,
-            .contacto-content {
+            .contacto-content,
+            .quienes-somos-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -1028,6 +1050,7 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
                 <li><a href="#aquafitness">Aquafitness</a></li>
                 <li><a href="#natacion">Natación</a></li>
                 <li><a href="#eventos">Eventos</a></li>
@@ -1051,6 +1074,19 @@
             <p>Aquafitness y Natación en Montería</p>
             <p>Tu mejor opción para entrenar en el agua</p>
             <a href="#contacto" class="cta-button">¡Únete Ahora!</a>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section class="section quienes-somos-section" id="quienes-somos">
+        <div class="container">
+            <h2 class="section-title">Quiénes Somos</h2>
+            <div class="quienes-somos-content">
+                <div class="quienes-somos-text">
+                    <p><strong>Club Deportivo Aquaten</strong> es un club deportivo dedicado a la promoción de la actividad física y el bienestar a través de programas acuáticos en la ciudad de Montería. Ofrecemos clases de natación para todas las edades y programas de aquafitness, orientados a la formación, el acondicionamiento físico y los hábitos de vida saludables.</p>
+                    <p style="margin-top: 1.5rem;">Nuestras actividades se desarrollan en escenarios deportivos habilitados, como la <strong>Villa Olímpica de Montería</strong> y piscinas privadas, contando con instructores capacitados y un enfoque en seguridad, inclusión y calidad deportiva.</p>
+                </div>
+            </div>
         </div>
     </section>
 
