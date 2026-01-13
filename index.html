@@ -350,6 +350,11 @@
                 min-height: 100%;
                 width: auto;
                 height: auto;
+                object-fit: cover;
+            }
+
+            .hero {
+                height: 60vh;
             }
         }
 
@@ -1412,7 +1417,7 @@
     <!-- Hero Section con Video -->
     <section class="hero" id="inicio">
         <div class="video-container">
-            <video autoplay muted loop>
+            <video id="heroVideo" autoplay muted loop playsinline webkit-playsinline>
                 <source src="./videos/VideoMarAzul-aquaten-monteria.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
@@ -2009,6 +2014,33 @@
                 card.style.transitionDelay = `${index * 0.1}s`;
                 observer.observe(card);
             });
+
+            // Forzar reproducción del video hero en móviles
+            const heroVideo = document.getElementById('heroVideo');
+            if (heroVideo) {
+                heroVideo.muted = true;
+                heroVideo.setAttribute('playsinline', '');
+                heroVideo.setAttribute('webkit-playsinline', '');
+                
+                const playPromise = heroVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log('Error al reproducir video hero:', error);
+                    });
+                }
+
+                // Intentar reproducir cuando el usuario interactúa con la página
+                const tryPlay = () => {
+                    if (heroVideo.paused) {
+                        heroVideo.play().catch(e => console.log('Error al reproducir:', e));
+                    }
+                };
+
+                // Intentar reproducir en diferentes eventos de interacción
+                document.addEventListener('touchstart', tryPlay, { once: true });
+                document.addEventListener('click', tryPlay, { once: true });
+                document.addEventListener('scroll', tryPlay, { once: true });
+            }
         });
 
         // Efecto Ripple en botones
