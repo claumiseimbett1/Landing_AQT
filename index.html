@@ -1154,9 +1154,10 @@
 
         .galeria-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            justify-items: center;
         }
 
         .galeria-item {
@@ -1166,7 +1167,9 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             cursor: pointer;
-            aspect-ratio: 16/9;
+            aspect-ratio: 9/16;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .galeria-item:hover {
@@ -1178,8 +1181,9 @@
         .galeria-item video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             transition: transform 0.3s ease;
+            background: #000;
         }
 
         .galeria-item:hover img,
@@ -1618,12 +1622,12 @@
             </p>
             <div class="galeria-grid" id="galeriaGrid">
                 <div class="galeria-item galeria-item-video" data-categoria="videos">
-                    <video muted loop>
+                    <video autoplay muted loop playsinline>
                         <source src="./videos/aquaten-natacion-aquafitness-monteria.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="galeria-item galeria-item-video" data-categoria="videos">
-                    <video muted loop>
+                    <video autoplay muted loop playsinline>
                         <source src="./videos/AquafitnessVideoCorales.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -2120,6 +2124,7 @@
         });
 
         // Galería de Actividades - Solo videos (sin filtros)
+        const galeriaItems = document.querySelectorAll('.galeria-item');
 
         // Galería Modal
         const galeriaModal = document.getElementById('galeriaModal');
@@ -2166,18 +2171,14 @@
             }
         });
 
-        // Reproducir videos en hover en la galería
-        galeriaItems.forEach(item => {
-            const video = item.querySelector('video');
-            if (video) {
-                item.addEventListener('mouseenter', () => {
-                    video.play();
+        // Asegurar que los videos se reproduzcan automáticamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.galeria-item video');
+            videos.forEach(video => {
+                video.play().catch(error => {
+                    console.log('Error al reproducir video automáticamente:', error);
                 });
-                item.addEventListener('mouseleave', () => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-            }
+            });
         });
     </script>
 </body>
