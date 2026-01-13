@@ -786,6 +786,88 @@
             transform: translateX(5px);
         }
 
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+        }
+
+        .faq-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active {
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 20px rgba(0, 240, 255, 0.15);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: transparent;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .faq-question:hover {
+            color: var(--secondary-color);
+        }
+
+        .faq-question span {
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--secondary-color);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin: 0;
+            padding-top: 1rem;
+        }
+
         /* Ubicación Section */
         .ubicacion-section {
             background: white;
@@ -1383,36 +1465,92 @@
             <h2 class="section-title">Preguntas Frecuentes</h2>
             <div class="faq-content">
                 <div class="faq-item">
-                    <h3>¿Necesito saber nadar para tomar clases de aquafitness?</h3>
-                    <p>No es necesario saber nadar para participar en nuestras <strong>clases de aquafitness en Montería</strong>. Las clases se realizan en zonas donde puedes estar de pie, y nuestros instructores te guiarán en todos los ejercicios de manera segura.</p>
+                    <button class="faq-question">
+                        <span>¿Necesito saber nadar para tomar clases de aquafitness?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No es necesario saber nadar para participar en nuestras <strong>clases de aquafitness en Montería</strong>. Las clases se realizan en zonas donde puedes estar de pie, y nuestros instructores te guiarán en todos los ejercicios de manera segura.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿A qué edad pueden empezar los niños con las clases de natación?</h3>
-                    <p>Nuestro <strong>programa de natación para niños en Montería</strong> acepta niños desde los 4 años. Tenemos programas adaptados a diferentes edades y niveles, desde iniciación hasta perfeccionamiento técnico.</p>
+                    <button class="faq-question">
+                        <span>¿A qué edad pueden empezar los niños con las clases de natación?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nuestro <strong>programa de natación para niños en Montería</strong> acepta niños desde los 4 años. Tenemos programas adaptados a diferentes edades y niveles, desde iniciación hasta perfeccionamiento técnico.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿Cuántas veces por semana debo asistir a las clases?</h3>
-                    <p>Recomendamos asistir al menos 2-3 veces por semana para obtener los mejores resultados. Sin embargo, puedes adaptar la frecuencia según tu disponibilidad y objetivos personales.</p>
+                    <button class="faq-question">
+                        <span>¿Cuántas veces por semana debo asistir a las clases?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos asistir al menos 2-3 veces por semana para obtener los mejores resultados. Sin embargo, puedes adaptar la frecuencia según tu disponibilidad y objetivos personales.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿Qué necesito llevar a las clases?</h3>
-                    <p>Para las clases de natación: traje de baño, gafas de natación, toalla y artículos de aseo personal. Para aquafitness: traje de baño cómodo, toalla y calzado acuático (opcional pero recomendado).</p>
+                    <button class="faq-question">
+                        <span>¿Qué necesito llevar a las clases?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para las clases de natación: traje de baño, gafas de natación, toalla y artículos de aseo personal. Para aquafitness: traje de baño cómodo, toalla y calzado acuático (opcional pero recomendado).</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿Ofrecen clases particulares o solo grupales?</h3>
-                    <p>En <strong>AquaTEN en Montería</strong> ofrecemos tanto clases grupales como privadas. Las clases grupales son ideales para motivación y socialización, mientras que las privadas permiten un enfoque personalizado según tus necesidades específicas.</p>
+                    <button class="faq-question">
+                        <span>¿Ofrecen clases particulares o solo grupales?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>En <strong>AquaTEN en Montería</strong> ofrecemos tanto clases grupales como privadas. Las clases grupales son ideales para motivación y socialización, mientras que las privadas permiten un enfoque personalizado según tus necesidades específicas.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿Las clases son adecuadas para personas con lesiones o problemas articulares?</h3>
-                    <p>Sí, especialmente el <strong>aquafitness en Montería</strong> es excelente para personas con lesiones o problemas articulares. El agua reduce el impacto hasta en un 90%, haciendo que los ejercicios sean más seguros. Te recomendamos consultar con nuestros instructores sobre tu condición específica.</p>
+                    <button class="faq-question">
+                        <span>¿Las clases son adecuadas para personas con lesiones o problemas articulares?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, especialmente el <strong>aquafitness en Montería</strong> es excelente para personas con lesiones o problemas articulares. El agua reduce el impacto hasta en un 90%, haciendo que los ejercicios sean más seguros. Te recomendamos consultar con nuestros instructores sobre tu condición específica.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿Dónde están ubicadas las instalaciones?</h3>
-                    <p>Nuestras clases se desarrollan en <strong>Piscina Villaolimpica</strong> y <strong>Piscina Corales (Piscina privada)</strong> en Montería, Córdoba. Ambas instalaciones cuentan con las mejores condiciones para nuestras actividades acuáticas.</p>
+                    <button class="faq-question">
+                        <span>¿Dónde están ubicadas las instalaciones?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nuestras clases se desarrollan en <strong>Piscina Villaolimpica</strong> y <strong>Piscina Corales (Piscina privada)</strong> en Montería, Córdoba. Ambas instalaciones cuentan con las mejores condiciones para nuestras actividades acuáticas.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <h3>¿Cómo puedo inscribirme o obtener más información?</h3>
-                    <p>Puedes contactarnos a través de nuestro formulario de contacto, WhatsApp (+57 304 349 9052), Instagram (@aquaten.cd) o Facebook. Estaremos encantados de responder todas tus preguntas y ayudarte a elegir el programa que mejor se adapte a ti.</p>
+                    <button class="faq-question">
+                        <span>¿Cómo puedo inscribirme o obtener más información?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puedes contactarnos a través de nuestro formulario de contacto, WhatsApp (+57 304 349 9052), Instagram (@aquaten.cd) o Facebook. Estaremos encantados de responder todas tus preguntas y ayudarte a elegir el programa que mejor se adapte a ti.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1675,6 +1813,25 @@
         }
 
         // Link del Championship ya configurado en el HTML
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Cerrar todos los items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Abrir el item clickeado si estaba cerrado
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
