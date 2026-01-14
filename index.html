@@ -325,6 +325,35 @@
             justify-content: center;
         }
 
+        /* Sección con video de fondo (Mar Azul) */
+        .mar-azul-section {
+            position: relative;
+            min-height: 55vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+        }
+
+        .mar-azul-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .mar-azul-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .mar-azul-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+        }
+
         .video-container {
             position: absolute;
             top: 0;
@@ -355,6 +384,18 @@
 
             .hero {
                 height: 60vh;
+            }
+
+            .mar-azul-section {
+                min-height: 50vh;
+            }
+
+            .mar-azul-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .mar-azul-content p {
+                font-size: 1rem;
             }
         }
 
@@ -1751,6 +1792,22 @@
                     <a href="https://ivchampionship.netlify.app/" target="_blank" rel="noopener noreferrer" class="evento-link" id="championshipLink">Revive el IV Championship Master Swimming 2025 - En espera de la V edición →</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Mar Azul como fondo -->
+    <section class="section mar-azul-section" id="mar-azul">
+        <div class="video-container">
+            <video autoplay muted loop playsinline webkit-playsinline>
+                <source src="./videos/VideoMarAzul-aquaten-monteria.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="video-overlay"></div>
+        <div class="container mar-azul-content">
+            <h2>Club Deportivo AquaTEN en Montería</h2>
+            <p>Aliado estratégico para natación y aquafitness en Montería. Unimos experiencia y espacios para que entrenes con confianza, mejores tu salud y disfrutes cada sesión en el agua.</p>
+            <a href="https://wa.me/573043499052" target="_blank" rel="noopener noreferrer" class="cta-button">Quiero más información</a>
         </div>
     </section>
 
