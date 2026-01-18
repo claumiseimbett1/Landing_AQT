@@ -15,16 +15,3 @@ Allow: /js/
 
 # Sitemap location
 Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
-
-# Crawl-delay (opcional, ajustar según necesidad)
-Crawl-delay: 1
-
-# Específico para Googlebot
-User-agent: Googlebot
-Allow: /
-Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
-
-# Específico para Bingbot
-User-agent: Bingbot
-Allow: /
-Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
