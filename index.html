@@ -219,7 +219,6 @@
             --background-light: #f0f6ff;
             --text-light: #ffffff;
             --text-dark: #333333;
-            --header-offset: 118px;
         }
 
         body {
@@ -247,24 +246,28 @@
             transition: all 0.3s ease;
         }
 
-        .header-promo {
+        .hero-promo {
+            display: inline-block;
+            margin-top: 1.25rem;
+            padding: 0.5rem 1.25rem;
             background: linear-gradient(90deg, var(--tertiary-color), var(--primary-color));
             color: var(--text-light);
             text-align: center;
-            padding: 0.45rem 1rem;
             font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 0.02em;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(11, 16, 57, 0.35);
         }
 
-        .header-promo a {
+        .hero-promo a {
             color: var(--secondary-color);
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s ease, color 0.2s ease;
         }
 
-        .header-promo a:hover {
+        .hero-promo a:hover {
             border-bottom-color: var(--secondary-color);
         }
 
@@ -347,7 +350,7 @@
 
         /* Hero Section con Video */
         .hero {
-            margin-top: var(--header-offset);
+            margin-top: 80px;
             position: relative;
             height: 70vh;
             overflow: hidden;
@@ -1410,20 +1413,16 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            :root {
-                --header-offset: 112px;
-            }
-
             .hamburger {
                 display: flex;
             }
 
             .nav-menu {
                 position: fixed;
-                top: var(--header-offset);
+                top: 70px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - var(--header-offset));
+                height: calc(100vh - 70px);
                 background: white;
                 flex-direction: column;
                 align-items: center;
@@ -1447,7 +1446,7 @@
             }
 
             .hero {
-                margin-top: var(--header-offset);
+                margin-top: 70px;
             }
 
             .section-title {
@@ -1571,9 +1570,6 @@
     
     <!-- Header -->
     <header class="header">
-        <div class="header-promo">
-            <span class="header-promo-text">Pregunta por <a href="https://wa.me/573043499052?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20promo%20de%20abril" target="_blank" rel="noopener noreferrer">promo de abril</a></span>
-        </div>
         <nav class="nav-container">
             <img src="./logo/AQUATEN_LogoTransparenteGRANDE.png" alt="AquaTEN Logo" class="nav-logo">
             <div class="hamburger" id="hamburger">
@@ -1609,6 +1605,9 @@
             <p>Clases de natación, curso de natación y aquafitness en Montería</p>
             <p>Tu mejor opción para entrenar en el agua con seguridad y guía profesional</p>
             <a href="https://wa.me/573043499052" target="_blank" rel="noopener noreferrer" class="cta-button">Escríbenos por WhatsApp</a>
+            <div class="hero-promo">
+                <span class="hero-promo-text">Pregunta por <a href="https://wa.me/573043499052?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20promo%20de%20abril" target="_blank" rel="noopener noreferrer">promo de abril</a></span>
+            </div>
         </div>
     </section>
 
