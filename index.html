@@ -148,8 +148,8 @@
       "@context": "https://schema.org",
       "@type": "Event",
       "name": "V Championship Master Swimming en Montería",
-      "description": "El V Championship Master Swimming en Montería es uno de los eventos deportivos de natación más importantes en Montería, Córdoba. Este campeonato reúne a los mejores nadadores de diferentes categorías para competir en un ambiente deportivo y de camaradería.",
-      "startDate": "2026-06-01T08:00:00-05:00",
+      "description": "V Championship Master Swimming en Montería. La V edición será el 18 de abril de 2026. Evento deportivo de natación que reúne a nadadores master en Montería, Córdoba, en un ambiente de competencia y camaradería.",
+      "startDate": "2026-04-18T08:00:00-05:00",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "location": {
@@ -219,6 +219,7 @@
             --background-light: #f0f6ff;
             --text-light: #ffffff;
             --text-dark: #333333;
+            --header-offset: 118px;
         }
 
         body {
@@ -237,7 +238,7 @@
         .header {
             background: white;
             color: var(--primary-color);
-            padding: 1rem 0;
+            padding: 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -246,8 +247,33 @@
             transition: all 0.3s ease;
         }
 
+        .header-promo {
+            background: linear-gradient(90deg, var(--tertiary-color), var(--primary-color));
+            color: var(--text-light);
+            text-align: center;
+            padding: 0.45rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .header-promo a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .header-promo a:hover {
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .header.scrolled .nav-container {
+            padding: 0.5rem 2rem;
+            box-shadow: none;
+        }
+
         .header.scrolled {
-            padding: 0.5rem 0;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             background: rgba(255, 255, 255, 0.98);
             -webkit-backdrop-filter: blur(10px);
@@ -261,7 +287,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -321,7 +347,7 @@
 
         /* Hero Section con Video */
         .hero {
-            margin-top: 80px;
+            margin-top: var(--header-offset);
             position: relative;
             height: 70vh;
             overflow: hidden;
@@ -1384,16 +1410,20 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            :root {
+                --header-offset: 112px;
+            }
+
             .hamburger {
                 display: flex;
             }
 
             .nav-menu {
                 position: fixed;
-                top: 70px;
+                top: var(--header-offset);
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 70px);
+                height: calc(100vh - var(--header-offset));
                 background: white;
                 flex-direction: column;
                 align-items: center;
@@ -1417,7 +1447,7 @@
             }
 
             .hero {
-                margin-top: 70px;
+                margin-top: var(--header-offset);
             }
 
             .section-title {
@@ -1541,6 +1571,9 @@
     
     <!-- Header -->
     <header class="header">
+        <div class="header-promo">
+            <span class="header-promo-text">Pregunta por la <a href="https://wa.me/573043499052?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20gran%20promo%20de%20abril" target="_blank" rel="noopener noreferrer">gran promo de abril</a></span>
+        </div>
         <nav class="nav-container">
             <img src="./logo/AQUATEN_LogoTransparenteGRANDE.png" alt="AquaTEN Logo" class="nav-logo">
             <div class="hamburger" id="hamburger">
@@ -2070,8 +2103,10 @@
         <div class="container">
             <h2 class="section-title">Eventos Deportivos de Natación en Montería</h2>
             <div class="evento-card">
-                <h2>Championship Master Swimming en Montería <span class="evento-badge">Evento pendiente de programación</span></h2>
+                <h2>Championship Master Swimming en Montería <span class="evento-badge">V edición · 18 de abril de 2026</span></h2>
                 <p>El <strong>Championship Master Swimming en Montería</strong> es uno de los <strong>eventos deportivos de natación más importantes en Montería, Córdoba</strong>. Este campeonato reúne a los mejores nadadores de diferentes categorías para competir en un ambiente deportivo y de camaradería. Organizado por <strong>Montería Club Deportivo AquaTEN</strong>, estos <strong>eventos de natación en Montería</strong> promueven la excelencia deportiva y el desarrollo de la natación competitiva en la región.</p>
+
+                <p style="margin-top: 1.5rem;"><strong>🚀 V Championship Master Swimming:</strong> La <strong>V edición</strong> será el <strong>18 de abril de 2026</strong> en Montería. Seguimos con el compromiso de promover la excelencia deportiva y el compañerismo en la natación; será uno de los <strong>eventos deportivos más importantes de natación en Montería, Córdoba</strong> del año.</p>
                 
                 <div style="margin: 2rem 0; padding: 1.5rem; background: var(--background-light); border-radius: 10px; border-left: 4px solid var(--secondary-color);">
                     <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.3rem;">🏊 IV Championship Master Swimming 2025 - Evento Pasado</h4>
@@ -2091,15 +2126,13 @@
                         </div>
                     </div>
                 </div>
-
-                <p style="margin-top: 1.5rem;"><strong>🚀 V Edición:</strong> Nos preparamos para la <strong>V Championship Master Swimming en Montería</strong>, continuando con nuestro compromiso de promover la excelencia deportiva y el compañerismo en la natación. Próximamente anunciaremos la fecha y detalles del evento. Este será uno de los <strong>eventos deportivos más importantes de natación en Montería, Córdoba</strong> del año.</p>
                 
                 <p><strong>Organizadores:</strong> Clubes Deportivos <strong>AQUATEN</strong> y <strong>ELYANASNATACION</strong> en <strong>Montería, Córdoba</strong></p>
                 
                 <p><strong>¿Buscas eventos de natación en Montería?</strong> Sigue nuestras redes sociales para estar al día con los próximos <strong>eventos deportivos de natación en Montería, Córdoba</strong>, competencias locales y campeonatos regionales.</p>
                 
                 <div style="margin-top: 2rem; text-align: center;">
-                    <a href="https://ivchampionship.netlify.app/" target="_blank" rel="noopener noreferrer" class="evento-link" id="championshipLink">Revive el IV Championship Master Swimming 2025 - En espera de la V edición →</a>
+                    <a href="https://ivchampionship.netlify.app/" target="_blank" rel="noopener noreferrer" class="evento-link" id="championshipLink">Revive el IV Championship Master Swimming 2025 →</a>
                 </div>
             </div>
         </div>
