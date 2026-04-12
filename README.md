@@ -135,10 +135,9 @@ Landing_AQT/
 - SEO optimizado para búsquedas locales
 
 ### 4. Eventos Deportivos
-- Información sobre Championship Master Swimming
-- Estadísticas del IV Championship 2025
-- Información sobre la V Edición próxima
-- Enlace al sitio del campeonato anterior
+- Información informativa sobre el **V Championship Master Swimming** (18 de abril de 2026, Villa Olímpica, Montería)
+- Enlace al sitio oficial del evento: [vchampionship.netlify.app](https://vchampionship.netlify.app/)
+- Organizadores: Clubes Deportivos AQUATEN y ELYANASNATACION
 
 ### 5. Ubicación
 - Mapa de Google Maps
