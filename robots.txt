@@ -1,5 +1,5 @@
 # robots.txt para Montería Club Deportivo AquaTEN
-# https://monteriaaquatenclub.netlify.app/robots.txt
+# https://aquatencd.com/robots.txt
 
 User-agent: *
 Allow: /
@@ -14,4 +14,4 @@ Allow: /css/
 Allow: /js/
 
 # Sitemap location
-Sitemap: https://monteriaaquatenclub.netlify.app/sitemap.xml
+Sitemap: https://aquatencd.com/sitemap.xml
