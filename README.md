@@ -102,9 +102,10 @@ Landing_AQT/
    - Asegúrate de mantener la estructura de carpetas
 
 3. **Configurar el dominio**
-   - Actualiza las URLs en `index.html` (líneas 19, 23, 32, 48, etc.)
-   - Reemplaza `https://aquaten.com` con tu dominio real
-   - Actualiza las URLs en `sitemap.xml`
+   - Dominio canónico: `https://www.aquatencd.com`
+   - URLs configuradas en `index.html`, `sitemap.xml` y `robots.txt`
+   - `.htaccess` redirige automáticamente HTTP → HTTPS y `aquatencd.com` → `www.aquatencd.com`
+   - Requiere certificado SSL activo en el hosting
 
 4. **Verificar permisos**
    - Asegúrate de que `.htaccess` esté habilitado en Apache

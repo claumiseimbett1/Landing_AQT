@@ -4,7 +4,7 @@
 
 ### 1. **sitemap.xml**
 - Contiene todas las secciones principales del sitio
-- **IMPORTANTE**: Actualiza la URL `https://aquaten.com/` con tu dominio real cuando lo tengas
+- Dominio canónico: `https://www.aquatencd.com/`
 - Sube este archivo a la raíz de tu servidor web
 - Envíalo a Google Search Console y Bing Webmaster Tools
 
@@ -12,14 +12,15 @@
 - Permite que los motores de búsqueda rastreen todo el sitio
 - Bloquea directorios privados (admin, private)
 - Incluye referencia al sitemap
-- **IMPORTANTE**: Actualiza la URL del sitemap con tu dominio real
+- Incluye referencia al sitemap (`https://www.aquatencd.com/sitemap.xml`)
 
 ### 3. **.htaccess**
 - Configurado para optimización de rendimiento
 - Compresión GZIP
 - Cache del navegador
 - Headers de seguridad
-- **IMPORTANTE**: Descomenta las líneas de redirección HTTPS cuando tengas certificado SSL
+- Redirección HTTPS y no-www → www activas
+- Header HSTS configurado
 
 ### 4. **index.html**
 - ✅ Contactos actualizados:
@@ -32,17 +33,17 @@
 
 ## 📋 Pasos Siguientes para Mejorar SEO
 
-### 1. **Actualizar URLs**
-Cuando tengas tu dominio real, actualiza:
+### 1. **URLs configuradas**
+Dominio canónico: `https://www.aquatencd.com`
 - `index.html`: Canonical URL, og:url, twitter:url
 - `sitemap.xml`: Todas las URLs
 - `robots.txt`: URL del sitemap
-- `.htaccess`: Redirección HTTPS
+- `.htaccess`: Redirección HTTPS y no-www → www activas
 
 ### 2. **Google Search Console**
 1. Registra tu sitio en: https://search.google.com/search-console
 2. Verifica la propiedad del sitio
-3. Envía el sitemap: `https://tudominio.com/sitemap.xml`
+3. Envía el sitemap: `https://www.aquatencd.com/sitemap.xml`
 4. Monitorea el rendimiento
 
 ### 3. **Bing Webmaster Tools**
@@ -90,7 +91,7 @@ El formulario actual usa Formspree como placeholder. Opciones:
 ## 🚀 Próximos Pasos
 
 1. ✅ Sube todos los archivos al servidor
-2. ✅ Actualiza las URLs con tu dominio real
+2. ✅ URLs configuradas con dominio `https://www.aquatencd.com`
 3. ✅ Configura Google Search Console
 4. ✅ Configura Analytics
 5. ✅ Configura el formulario de contacto

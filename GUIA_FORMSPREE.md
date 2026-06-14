@@ -115,10 +115,10 @@ if (contactForm) {
 Si quieres redirigir a los usuarios a una página de agradecimiento después de enviar el formulario:
 
 1. En Formspree, ve a la configuración de tu formulario
-2. En **"Redirect"**, ingresa la URL: `https://tudominio.com/#contacto` (o crea una página de agradecimiento)
+2. En **"Redirect"**, ingresa la URL: `https://www.aquatencd.com/#contacto` (o crea una página de agradecimiento)
 3. O agrega un campo oculto en el HTML:
    ```html
-   <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+   <input type="hidden" name="_next" value="https://www.aquatencd.com/gracias.html">
    ```
 
 ### Agregar Campo de Nombre del Formulario
