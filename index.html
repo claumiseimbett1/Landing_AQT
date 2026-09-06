@@ -459,6 +459,34 @@
             background: linear-gradient(90deg, #ffd54f, var(--secondary-color));
         }
 
+        .info-popup-block--promo {
+            border-left-color: #ffd54f;
+            background: linear-gradient(135deg, #fffbe6 0%, #ffffff 60%);
+        }
+
+        .promo-box {
+            margin-top: 1rem;
+            padding: 1rem 1.15rem;
+            background: linear-gradient(135deg, #fff8d6, #e8fbff);
+            border-radius: 10px;
+            border-left: 4px solid #ffd54f;
+        }
+
+        .promo-box p {
+            margin: 0.35rem 0 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .promo-box strong {
+            color: var(--primary-color);
+        }
+
+        .evento-card--promo {
+            border: 2px solid var(--secondary-color);
+            background: linear-gradient(135deg, #fffbe6 0%, #ffffff 55%);
+        }
+
         .info-popup-actions {
             padding: 0 1.5rem 1.5rem;
         }
@@ -1990,10 +2018,10 @@
     
     <!-- Header -->
     <header class="header">
-        <div class="site-info-banner site-info-banner--clickable" id="infoBanner" role="button" tabindex="0" aria-label="Ver horarios de Aquafitness y natación">
+        <div class="site-info-banner site-info-banner--clickable" id="infoBanner" role="button" tabindex="0" aria-label="Ver promo de Aquafitness y horarios de septiembre">
             <p class="site-info-banner-text">
-                <span class="site-info-banner-tag">Agosto</span>
-                <strong>Aquafitness</strong> · <strong>Natación adultos y niños</strong> · <strong>Militares y policías</strong> — cupos abiertos en Montería. <span style="opacity:0.85;font-size:0.85em;">(clic para ver más)</span>
+                <span class="site-info-banner-tag">Septiembre</span>
+                <strong>Promo Aquafitness:</strong> paga 6 sesiones y recibe 1 adicional en el mes, o paga 8 y recibe 1 adicional en el mes. Solo en septiembre. <span style="opacity:0.85;font-size:0.85em;">(clic para ver más)</span>
             </p>
         </div>
         <nav class="nav-container">
@@ -2016,26 +2044,35 @@
         </nav>
     </header>
 
-    <!-- Popup informativo: horarios agosto -->
+    <!-- Popup informativo: horarios septiembre + promo aquafitness -->
     <div class="info-popup" id="infoPopup" role="dialog" aria-modal="true" aria-labelledby="infoPopupTitle" aria-hidden="true">
         <div class="info-popup-panel">
             <button type="button" class="info-popup-close" id="infoPopupClose" aria-label="Cerrar">&times;</button>
             <div class="info-popup-header">
                 <img src="./images/AQUATEN_Mascota-gafas-natacion-transparente-AQUATITO-NATACION.png" alt="Aquatito Natación - Mascota AquaTEN" class="info-popup-mascot">
                 <div class="info-popup-header-text">
-                    <h2 id="infoPopupTitle">Agosto en AquaTEN</h2>
-                    <p>Aquafitness · Natación adultos y niños · Fuerzas militares</p>
+                    <h2 id="infoPopupTitle">Septiembre en AquaTEN</h2>
+                    <p>Promo Aquafitness · Natación · Fuerzas militares</p>
                 </div>
             </div>
             <div class="info-popup-body">
+                <div class="info-popup-block info-popup-block--promo">
+                    <h3>🎉 Promo Aquafitness — Septiembre</h3>
+                    <p><strong>Solo aquafitness.</strong> Válida únicamente en septiembre.</p>
+                    <ul>
+                        <li>Paga <strong>6 sesiones</strong> y recibe <strong>1 adicional en el mes</strong></li>
+                        <li>O paga <strong>8 sesiones</strong> y recibe <strong>1 adicional en el mes</strong></li>
+                    </ul>
+                    <span class="info-popup-highlight info-popup-highlight--unique">Promo septiembre</span>
+                </div>
                 <div class="info-popup-block">
-                    <h3>💪 Aquafitness</h3>
-                    <p>Entrena en el agua con bajo impacto. Cupos abiertos en agosto.</p>
+                    <h3>💪 Aquafitness — Horarios</h3>
+                    <p>Entrena en el agua con bajo impacto. Cupos abiertos en septiembre.</p>
                     <ul>
                         <li><strong>Lunes y miércoles</strong> — 7:00 a.m.</li>
                         <li><strong>Lunes, miércoles y jueves</strong> — 8:00 p.m.</li>
                     </ul>
-                    <span class="info-popup-highlight">Horarios de agosto</span>
+                    <span class="info-popup-highlight">Horarios de septiembre</span>
                 </div>
                 <div class="info-popup-block">
                     <h3>🏊 Natación — Villa Olímpica</h3>
@@ -2060,7 +2097,7 @@
                 </div>
             </div>
             <div class="info-popup-actions">
-                <a href="https://wa.me/573043499052?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Aquafitness%20y%20nataci%C3%B3n%20en%20agosto" target="_blank" rel="noopener noreferrer" class="cta-button"><span class="cta-button-text">Consultar por WhatsApp</span></a>
+                <a href="https://wa.me/573043499052?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20promo%20de%20Aquafitness%20en%20septiembre" target="_blank" rel="noopener noreferrer" class="cta-button"><span class="cta-button-text">Consultar promo por WhatsApp</span></a>
             </div>
         </div>
     </div>
@@ -2125,6 +2162,9 @@
                     <h3>¿Qué es Aquafitness?</h3>
                     <p>El <strong>aquafitness en Montería</strong> combina ejercicios aeróbicos y de fuerza en el agua. En AquaTEN dictamos <strong>clases de aquafitness en Montería, Córdoba</strong> en Piscina Corales y Piscina Villaolimpica: entrenamiento de bajo impacto para adultos de todos los niveles.</p>
                     <p style="margin-top: 1.5rem;"><strong>¿Buscas aquafitness en Montería?</strong> Instructores certificados y <strong>gimnasia acuática en Montería</strong> para mejorar tu condición física de forma segura.</p>
+                    <div class="promo-box">
+                        <p><strong>Promo septiembre (solo aquafitness):</strong> paga 6 sesiones y recibe 1 adicional en el mes, o paga 8 sesiones y recibe 1 adicional en el mes. Válida solo en septiembre.</p>
+                    </div>
                 </div>
                 <div class="aquafitness-images">
                     <div class="aquafitness-image main">
@@ -2559,10 +2599,12 @@
     <!-- Eventos Section -->
     <section class="section eventos-section" id="eventos">
         <div class="container">
-            <h2 class="section-title">Horarios de Agosto</h2>
-            <div class="evento-card">
-                <h2>Aquafitness <span class="evento-badge">Agosto</span></h2>
-                <p><strong>Aquafitness:</strong> lun y mié 7:00 a.m. · lun, mié y jue 8:00 p.m.</p>
+            <h2 class="section-title">Horarios de Septiembre</h2>
+            <div class="evento-card evento-card--promo">
+                <h2>Promo Aquafitness <span class="evento-badge">Septiembre</span></h2>
+                <p><strong>Solo aquafitness.</strong> Promo válida únicamente en septiembre:</p>
+                <p style="margin-top: 0.75rem;">Paga <strong>6 sesiones</strong> y recibe <strong>1 adicional en el mes</strong>, o paga <strong>8 sesiones</strong> y recibe <strong>1 adicional en el mes</strong>.</p>
+                <p style="margin-top: 0.75rem;"><strong>Horarios:</strong> lun y mié 7:00 a.m. · lun, mié y jue 8:00 p.m.</p>
             </div>
             <div class="evento-card">
                 <h2>Natación — Villa Olímpica <span class="evento-badge">Adultos y niños</span></h2>
@@ -2998,9 +3040,9 @@
                 }
             });
 
-            if (infoPopup && !sessionStorage.getItem('aquaten-info-popup-seen')) {
+            if (infoPopup && !sessionStorage.getItem('aquaten-info-popup-seen-sep2026')) {
                 setTimeout(openInfoPopup, 800);
-                sessionStorage.setItem('aquaten-info-popup-seen', '1');
+                sessionStorage.setItem('aquaten-info-popup-seen-sep2026', '1');
             }
         });
 
