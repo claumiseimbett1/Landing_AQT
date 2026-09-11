@@ -164,7 +164,7 @@ Estos colores están definidos como variables CSS en el archivo `index.html`.
 
 ## 📞 Información de Contacto
 
-- **WhatsApp**: +57 304 349 9052
+- **WhatsApp**: +57 305 306 9113
 - **Instagram**: [@aquaten.cd](https://www.instagram.com/aquaten.cd/)
 - **Facebook**: [AquaTEN](https://www.facebook.com/profile.php?id=61564187752886)
 - **Ubicación**: Piscina Corales y Villaolimpica, Montería, Córdoba, Colombia

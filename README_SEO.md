@@ -24,7 +24,7 @@
 
 ### 4. **index.html**
 - ✅ Contactos actualizados:
-  - WhatsApp: +57 304 349 9052
+  - WhatsApp: +57 305 306 9113
   - Facebook: https://www.facebook.com/profile.php?id=61564187752886
   - Instagram: https://www.instagram.com/aquaten.cd/
 - ✅ Datos estructurados JSON-LD agregados (Schema.org)
@@ -84,7 +84,7 @@ El formulario actual usa Formspree como placeholder. Opciones:
 
 ## 📱 Contactos Configurados
 
-- **WhatsApp**: +57 304 349 9052
+- **WhatsApp**: +57 305 306 9113
 - **Instagram**: @aquaten.cd
 - **Facebook**: https://www.facebook.com/profile.php?id=61564187752886
 
